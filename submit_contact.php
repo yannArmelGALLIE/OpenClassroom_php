@@ -1,11 +1,11 @@
 <?php 
-$getData =$_GET;
+$postData =$_POST;
 
 if (
-     !isset($getData['email']) 
-     || !filter_var($getData['email'], FILTER_VALIDATE_EMAIL)
-     || empty($getData['message'])
-     || trim($getData['message']) === ''
+     !isset($postData['email']) 
+     || !filter_var($postData['email'], FILTER_VALIDATE_EMAIL)
+     || empty($postData['message'])
+     || trim($postData['message']) === ''
    ) 
 {
     echo ('Il faut renseigner un email et un message');
@@ -27,10 +27,10 @@ if (
         <div>
             <h5>Rappel de vos informations</h5>
             <p>
-                <b>Email</b> : <?php echo ($getData['email']); ?>
+                <b>Email</b> : <?php echo ($postData['email']); ?>
             </p>
             <p>
-                <b>Message</b> : <?php echo ($getData['message']); ?>
+                <b>Message</b> : <?php echo (strip_tags($postData['message'])); ?>
             </p>
         </div>
     </div>
