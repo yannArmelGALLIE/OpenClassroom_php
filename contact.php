@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="submit_contact.php" method="GET">
+    <form action="submit_contact.php" method="POST">
         <div>
             <label for="email">Email</label>
             <input type="email" name="email" id="">
