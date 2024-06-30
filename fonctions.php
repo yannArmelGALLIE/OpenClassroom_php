@@ -30,3 +30,9 @@ function displayAuthor(string $authorEmail, array $users): string
     } 
  }   
 }
+// Rediriger un utilisateur vers une autre page
+function redirectToUrl(string $url) : never
+{
+    header("Location: {$url}");
+    exit();
+}
