@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +10,8 @@
 </head>
 
 <body>
+    <?php require_once(__DIR__ . '/en-tête.php'); ?>
+
     <form action="submit_contact.php" method="POST" enctype="multipart/form-data">
         <div>
             <label for="email">Email</label>
@@ -23,6 +27,9 @@
         </div>
         <button type="submit">Envoyer</button>
     </form>
+    <?php require_once(__DIR__ . '/pied_de_page.php'); ?>
+    <!-- <?php session_destroy(); ?> -->
+
 </body>
 
 </html>
