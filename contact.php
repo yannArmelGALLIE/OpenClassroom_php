@@ -28,7 +28,7 @@
         <button type="submit">Envoyer</button>
     </form>
     <?php require_once(__DIR__ . '/pied_de_page.php'); ?>
-    <!-- <?php session_destroy(); ?> -->
+
 
 </body>
 
